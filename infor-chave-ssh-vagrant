@@ -1,0 +1,22 @@
+O caminho para a chave privada SSH que o Vagrant usa para se conectar às suas máquinas pode ser encontrado usando o comando vagrant ssh-config. Este comando exibe as configurações de SSH para a máquina Vagrant, incluindo o caminho para a chave privada.
+
+Aqui está um exemplo de como você pode usar este comando:
+
+vagrant ssh-config vm1
+
+Neste exemplo, vm1 é o nome da máquina Vagrant. O comando exibirá uma saída semelhante a esta:
+
+Host vm1
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /path/to/vagrant/machines/default/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Na saída acima, a linha que começa com IdentityFile mostra o caminho para a chave privada SSH. Neste caso, o caminho é /path/to/vagrant/machines/default/virtualbox/private_key..
+
+Lembre-se de substituir vm1 pelo nome da sua máquina Vagrant e /path/to/vagrant/machines/default/virtualbox/private_key pelo caminho real para a chave privada SSH na sua máquina.
