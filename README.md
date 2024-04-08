@@ -4,8 +4,10 @@
 PASSO A PASSO
 
 Podemos usar o ansible instalado no host para automatizar as vms criadas pelo vagrant
-para isso basta criar o arquivo sem extensão vagrant_ansible_inventory dentro da mesma pasta onde 
-está localizado o vagrantfile usando o comando:
+para isso basta usar o recurso do inventario automativo do vagrant, é arquivo sem extensão ou com a extensão .yaml chamado vagrant_ansible_inventory,
+sua localização deve ser na mesma pasta onde está localizado o vagrantfile
+
+Para gerar esse arquivo use:
 
   vagrant provision --provision-with=ansible
 
