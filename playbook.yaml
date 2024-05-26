@@ -1,0 +1,9 @@
+---
+ - name: Meu playbook
+   hosts: localhost
+   tasks:
+     - name: debug
+       debug:
+         msg: "Minha mensagem ansible"
+
+...
