@@ -1,0 +1,11 @@
+---
+
+ - name: Update Linux System
+   hosts: all
+   tasks:
+     - name: APT - uPDATE CACHE
+       apt: update_cache=yes
+       when: ansibledistribution == "Debian" or ansible_distribution == "Ubuntu"
+     - name:
+       apt: name="*" state=latest
+       when: ansibledistribution == "Debian" or ansible_distribution == "Ubuntu"
