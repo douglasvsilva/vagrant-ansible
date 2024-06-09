@@ -9,3 +9,6 @@
         owner: douglas
         group: douglas
         mode: '0644'
+        remote_src: yes
+
+
