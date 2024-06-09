@@ -1,0 +1,10 @@
+---
+- name: Install Apache
+  hosts: all  
+  tasks:
+    - name: APT -apache
+      apt: 
+        name: apache2
+        state: latest
+
+...
