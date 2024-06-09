@@ -1,0 +1,11 @@
+---
+- name: Playbook - copiando arquivos
+  hosts: all 
+  tasks:
+    - name: Copiar arquivo com proprietário e permissões
+      ansible.builtin.copy:
+        src: /home/raspberrypi/doug.txt
+        dest: /home/raspberrypi/teste/doug.txt
+        owner: douglas
+        group: douglas
+        mode: '0644'
