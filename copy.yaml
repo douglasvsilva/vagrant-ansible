@@ -4,8 +4,8 @@
   tasks:
     - name: Copiar arquivo com proprietário e permissões
       ansible.builtin.copy:
-        src: /home/raspberrypi/doug.txt
-        dest: /home/raspberrypi/teste/doug.txt
+        src: /home/douglas/doug.txt
+        dest: /home/douglas/teste/doug.txt
         owner: douglas
         group: douglas
         mode: '0644'
